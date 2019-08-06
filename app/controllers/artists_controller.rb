@@ -1,15 +1,15 @@
 class ArtistsController < ApplicationController
 
   def index
-    @artists = Artist.all
+    @artist = Artist.all
   end
 
   def show
-    @artists = Artist.find(params[:id])
+    @artist = Artist.find(params[:id])
   end
 
   def new
-    @artists = Artist.new
+    @artist = Artist.new
   end
 
   def create
@@ -19,11 +19,11 @@ class ArtistsController < ApplicationController
   end
 
   def edit
-    @artists = Artist.find(params[:id])
+    @artist = Artist.find(params[:id])
   end
 
   def update
-    @artists = Artist.find(params[:id])
+    @artist = Artist.find(params[:id])
     @artist.update(artist_params)
     redirect_to artist_path(@artist)
   end
